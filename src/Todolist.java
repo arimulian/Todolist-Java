@@ -16,14 +16,14 @@ public class Todolist {
 	public static void showTodolist() {
 		System.out.println("Todolist");
 
-			for (int i = 0; i < model.length; i++) {
-				var todo = model[i];
-				var no = i + 1;
-				if (todo != null) {
-					System.out.println(no + ". " + todo);
-				}
+		for (int i = 0; i < model.length; i++) {
+			var todo = model[i];
+			var no = i + 1;
+			if (todo != null) {
+				System.out.println(no + ". " + todo);
 			}
 		}
+	}
 
 
 	public static void testShowTodolist() {
@@ -43,7 +43,7 @@ public class Todolist {
 			}
 		}
 
-		//jika penh, resize ukurannya menjadi 2x lipat
+		//jika penuh, resize ukurannya menjadi 2x lipat
 		if (isFull) {
 			var temp = model;
 			model = new String[model.length * 2];
@@ -168,10 +168,10 @@ public class Todolist {
 	public static void viewAddTodolist() {
 		System.out.println("Menambahkan Todo");
 		var todo = input("todo (x maka batal)");
-		if (todo.equals("x")){
+		if (todo.equals("x")) {
 			//batal
-		}else {
-		addTodolist(todo);
+		} else {
+			addTodolist(todo);
 		}
 	}
 
@@ -189,9 +189,9 @@ public class Todolist {
 		System.out.println("Menghapus Todolist");
 		var number = input("Nomor yang dihapus (x maka batal)");
 
-		if (number.equals("x")){
+		if (number.equals("x")) {
 			//batal
-		}else {
+		} else {
 			boolean success = deleteTodolist(Integer.valueOf(number));
 			if (!success) {
 				System.out.println("Gagal menghapus todolist " + number);
@@ -200,7 +200,7 @@ public class Todolist {
 
 	}
 
-	public static void testViewDeleteTodolist(){
+	public static void testViewDeleteTodolist() {
 		addTodolist("todolist ke - 1");
 		addTodolist("todolist ke - 2");
 		addTodolist("todolist ke - 3");
