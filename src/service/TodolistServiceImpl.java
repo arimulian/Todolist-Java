@@ -29,16 +29,16 @@ public class TodolistServiceImpl implements TodolistService {
 	public void addTodolist(String todo) {
 		Todolist todolist = new Todolist(todo);
 		todolistRepository.add(todolist);
-		System.out.println("Successfully added : " + todo);
+		System.out.println("Sukses Menambahkan : " + todo);
 	}
 
 	@Override
 	public void removeTodolist(Integer number) {
 		boolean success = todolistRepository.remove(number);
 		if (success) {
-			System.out.println("Successfully removed todo : " + number);
+			System.out.println("Sukses menghapus todo : " + number);
 		} else {
-			System.out.println("Failed to remove todo : " + number);
+			System.out.println("Gagal Menghapus todo : " + number);
 		}
 	}
 }
